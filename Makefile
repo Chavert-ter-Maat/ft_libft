@@ -90,10 +90,11 @@ clean:
 
 fclean: clean
 	$(RM) $(NAME)
-	@echo "$(YELLOW) ft_printf object files & folders are cleaned $(DEF_COLOR)"
+	@echo "$(RED) ft_printf object files & folders are cleaned $(DEF_COLOR)"
 
 re: fclean $(NAME)
 
 bonus: $(OBJ_BONUS)
 	$(AR) $(NAME) $(OBJ_BONUS)
 	@echo "$(GREEN) ft_libft_bonus compiled $(DEF_COLOR)"
+
