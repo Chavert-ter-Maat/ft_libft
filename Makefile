@@ -10,6 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
+
 # VARIABLES
 NAME 	= libft.a
 CC 		= gcc
@@ -46,7 +47,6 @@ SRC =	ft_atoi.c \
 		ft_strlen.c \
 		ft_strmapi.c \
 		ft_strncmp.c \
-		ft_strnstr.c \
 		ft_strrchr.c \
 		ft_strtrim.c \
 		ft_substr.c \
@@ -86,15 +86,14 @@ $(NAME): $(OBJ)
 
 clean:
 	$(RM) $(OBJ) $(OBJ_BONUS)
-	@echo "$(YELLOW) ft_libft object files cleaned $(DEF_COLOR)"
+	@echo "$(YELLOW)ft_libft object files cleaned $(DEF_COLOR)"
 
 fclean: clean
 	$(RM) $(NAME)
-	@echo "$(RED) ft_printf object files & folders are cleaned $(DEF_COLOR)"
+	@echo "$(RED)ft_printf object files & folders are cleaned $(DEF_COLOR)"
 
 re: fclean $(NAME)
 
 bonus: $(OBJ_BONUS)
 	$(AR) $(NAME) $(OBJ_BONUS)
-	@echo "$(GREEN) ft_libft_bonus compiled $(DEF_COLOR)"
-
+	@echo "$(GREEN)ft_libft_bonus compiled $(DEF_COLOR)"
