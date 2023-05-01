@@ -6,7 +6,7 @@
 /*   By: cter-maa <cter-maa@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/16 12:11:27 by cter-maa      #+#    #+#                 */
-/*   Updated: 2023/02/16 12:17:28 by cter-maa      ########   odam.nl         */
+/*   Updated: 2023/05/01 09:55:24 by cter-maa      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*temp;
-	
+
 	temp = head_stack;
 	if (lst)
 	{
-		while(lst)
+		while (lst)
 		{
 			free(lst->next);
 			lst = lst->next;

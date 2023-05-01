@@ -6,7 +6,7 @@
 /*   By: cter-maa <cter-maa@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/01 15:37:56 by cter-maa      #+#    #+#                 */
-/*   Updated: 2023/02/02 11:10:09 by cter-maa      ########   odam.nl         */
+/*   Updated: 2023/05/01 09:55:07 by cter-maa      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*new_node;
 
-	if (!(new_node = malloc(sizeof(t_list))))
+	new_node = malloc(sizeof(t_list));
+	if (!new_node)
 		return (NULL);
 	new_node->content = content;
 	new_node->next = NULL;

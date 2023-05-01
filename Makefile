@@ -10,7 +10,6 @@
 #                                                                              #
 # **************************************************************************** #
 
-
 # VARIABLES
 NAME 	= libft.a
 CC 		= gcc
@@ -47,6 +46,7 @@ SRC =	ft_atoi.c \
 		ft_strlen.c \
 		ft_strmapi.c \
 		ft_strncmp.c \
+		ft_strnstr.c \
 		ft_strrchr.c \
 		ft_strtrim.c \
 		ft_substr.c \
@@ -64,6 +64,9 @@ BONUS		=	ft_lstnew.c \
 OBJ			= $(SRC:.c=.o)
 OBJ_BONUS	= $(BONUS:.c=.o)
 
+# HEADERS
+HEADER		= libft.h
+
 # COLORS
 DEF_COLOR 	= \033[0;39m
 GRAY 		= \033[0;90m
@@ -78,11 +81,18 @@ WHITE 		= \033[0;97m
 # RULES
 all: $(NAME)
 
+$(NAME): $(OBJ)
+	$(AR) $(NAME) $(OBJ) 
+	@echo "$(GREEN)ft_libft compiled $(DEF_COLOR)"
+
 comp: all bonus clean
 
-$(NAME): $(OBJ)
-	$(AR) $(NAME) $(OBJ)
-	@echo "$(GREEN) ft_libft compiled $(DEF_COLOR)"
+%.o: %.c $(HEADER)
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+bonus: $(OBJ_BONUS)
+	$(AR) $(NAME) $(OBJ_BONUS)
+	@echo "$(GREEN)ft_libft_bonus compiled $(DEF_COLOR)"
 
 clean:
 	$(RM) $(OBJ) $(OBJ_BONUS)
@@ -93,7 +103,3 @@ fclean: clean
 	@echo "$(RED)ft_printf object files & folders are cleaned $(DEF_COLOR)"
 
 re: fclean $(NAME)
-
-bonus: $(OBJ_BONUS)
-	$(AR) $(NAME) $(OBJ_BONUS)
-	@echo "$(GREEN)ft_libft_bonus compiled $(DEF_COLOR)"
