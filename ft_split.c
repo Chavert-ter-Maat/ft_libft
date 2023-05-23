@@ -6,7 +6,7 @@
 /*   By: cter-maa <cter-maa@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/02 11:57:54 by cter-maa      #+#    #+#                 */
-/*   Updated: 2023/05/01 09:49:47 by cter-maa      ########   odam.nl         */
+/*   Updated: 2023/05/23 14:51:23 by cter-maa      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static int	free_split(char **split, int index)
 	return (1);
 }
 
-static int	add_words_split(const char *string, char separator, char **split)
+static int	create_split(const char *string, char separator, char **split)
 {
 	size_t	start;
 	size_t	end;
