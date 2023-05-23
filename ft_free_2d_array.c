@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstclear.c                                      :+:    :+:            */
+/*   ft_free_2d_array.c                                 :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: cter-maa <cter-maa@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/02/16 12:11:27 by cter-maa      #+#    #+#                 */
-/*   Updated: 2023/05/23 09:45:08 by cter-maa      ########   odam.nl         */
+/*   Created: 2023/05/23 09:39:05 by cter-maa      #+#    #+#                 */
+/*   Updated: 2023/05/23 09:43:59 by cter-maa      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.a"
+
 /* ************************************************************************** */
-/* Deletes and frees the given node and every successor of that node.		  */
+/* ft_free_2d_array(char ***cmd) frees a two dimentional array				  */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void ft_free_2d_array(char ***cmd)
 {
-	t_list *current;
-	t_list *next;
+    int index = 0;
 
-	if (lst && *lst)
-	{
-		current = *lst;
-		while (current)
-		{
-			next = current->next;
-			if (del)
-				del(current->content);
-			free(current);
-			current = next;
-		}
-		*lst = NULL;
-	}
+    while ((*cmd)[index])
+    {
+        free((*cmd)[index]);
+        index++;
+    }
+    free(*cmd);
+    *cmd = NULL;
 }
