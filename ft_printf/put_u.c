@@ -6,7 +6,7 @@
 /*   By: cter-maa <cter-maa@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/19 15:44:10 by cter-maa      #+#    #+#                 */
-/*   Updated: 2023/05/02 12:26:44 by cter-maa      ########   odam.nl         */
+/*   Updated: 2023/05/25 14:09:37 by cter-maa      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,6 @@ static char	*ft_itoa(unsigned int number)
 	if (number == 0)
 		string[0] = '0';
 	string[string_lenght] = '\0';
-	if (number < 0)
-	{
-		string[0] = '-';
-		number *= -1;
-	}
 	while (number > 0)
 	{
 		string[string_lenght - 1] = (number % 10) + '0';
