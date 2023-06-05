@@ -6,7 +6,7 @@
 /*   By: cter-maa <cter-maa@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/17 11:17:45 by cter-maa      #+#    #+#                 */
-/*   Updated: 2023/05/01 09:51:11 by cter-maa      ########   odam.nl         */
+/*   Updated: 2023/06/05 10:03:35 by cter-maa      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <stddef.h>
 # include <stdio.h>
+# include <limits.h>
 
 typedef struct s_list
 {
