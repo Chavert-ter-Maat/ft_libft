@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_strdup.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: cter-maa <cter-maa@student.codam.nl>         +#+                     */
+/*   By: cter-maa <cter-maa@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/14 15:05:02 by cter-maa      #+#    #+#                 */
-/*   Updated: 2023/04/30 14:49:40 by cter-maa      ########   odam.nl         */
+/*   Updated: 2024/01/04 16:12:08 by cter-maa      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strdup(const char *s1)
 		new_string[index] = s1[index];
 		index++;
 	}
-		new_string[index] = '\0';
+	new_string[index] = '\0';
 	return (new_string);
 	free (new_string);
 }

@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   put_s.c                                            :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: cter-maa <cter-maa@student.codam.nl>         +#+                     */
+/*   By: cter-maa <cter-maa@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/24 14:30:41 by cter-maa      #+#    #+#                 */
-/*   Updated: 2023/05/02 12:27:00 by cter-maa      ########   odam.nl         */
+/*   Updated: 2024/01/04 15:52:07 by cter-maa      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	print_string(char *string)
 	if (!string)
 		return (FAILED);
 	while (string[index])
-	{	
+	{
 		if (put_c(string[index]) == FAILED)
 			return (FAILED);
 		index++;
@@ -41,7 +41,7 @@ int	put_s(char *s)
 		return (6);
 	}
 	while (s[index])
-	{	
+	{
 		if (put_c(s[index]) == FAILED)
 			return (FAILED);
 		index++;

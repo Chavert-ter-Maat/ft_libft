@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_lstclear.c                                      :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: cter-maa <cter-maa@student.codam.nl>         +#+                     */
+/*   By: cter-maa <cter-maa@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/16 12:11:27 by cter-maa      #+#    #+#                 */
-/*   Updated: 2023/05/23 09:45:08 by cter-maa      ########   odam.nl         */
+/*   Updated: 2024/01/04 16:14:26 by cter-maa      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,10 @@
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list *current;
-	t_list *next;
+	t_list	*current;
+	t_list	*next;
 
 	if (lst && *lst)
 	{

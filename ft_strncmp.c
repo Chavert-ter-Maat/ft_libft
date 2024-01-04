@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_strncmp.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: cter-maa <cter-maa@student.codam.nl>         +#+                     */
+/*   By: cter-maa <cter-maa@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/14 17:42:18 by cter-maa      #+#    #+#                 */
-/*   Updated: 2023/05/25 11:02:01 by cter-maa      ########   odam.nl         */
+/*   Updated: 2024/01/04 16:14:50 by cter-maa      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	if (n == 0)
 		return (0);
 	while (s1[index] == s2[index] && index < n - 1)
-			index++;
+		index++;
 	return ((unsigned char)s1[index] - (unsigned char)s2[index]);
 }

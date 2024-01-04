@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_printf.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: chaverttermaat <chaverttermaat@student.      +#+                     */
+/*   By: cter-maa <cter-maa@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/11/17 13:58:06 by chavertterm   #+#    #+#                 */
-/*   Updated: 2023/05/02 12:28:39 by cter-maa      ########   odam.nl         */
+/*   Updated: 2024/01/04 15:52:49 by cter-maa      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	format(va_list argument_list, const char format)
 }
 
 int	ft_printf(const char *string, ...)
-{	
+{
 	int		index;
 	int		count;
 	int		protect;
@@ -45,7 +45,7 @@ int	ft_printf(const char *string, ...)
 	count = 0;
 	va_start(argument_list, string);
 	while (string[index])
-	{	
+	{
 		if (string[index] == '%' && string[index + 1] != '\0')
 		{
 			protect = format(argument_list, string[index + 1]);

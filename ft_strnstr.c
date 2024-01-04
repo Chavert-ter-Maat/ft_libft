@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_strnstr.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: cter-maa <cter-maa@student.codam.nl>         +#+                     */
+/*   By: cter-maa <cter-maa@student.42.fr>            +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2022/10/14 17:42:18 by cter-maa      #+#    #+#                 */
-/*   Updated: 2023/04/30 14:08:53 by cter-maa      ########   odam.nl         */
+/*   Updated: 2024/01/04 16:06:24 by cter-maa      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		while (haystack[index1 + index2] == needle[index2]
 			&& haystack[index1 + index2]
 			&& needle[index2] && index1 + index2 < len)
-		{		
+		{
 			index2++;
 			if (lenght_needle == index2)
 				return ((char *)&haystack[index1]);
